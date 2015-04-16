@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="zh-tw">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="黑客松 Hackathon Taiwan - 實現自我的創意、挑戰體能的極限">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://hackathon.tw">
+    <meta property="og:image" content="http://hackathon.tw/img/hangee-hackathon01.jpg">
+    <meta property="og:site_name" content="黑客松 Hackathon">
+    <meta name="description" content="黑客松（Hackathon）是黑客（Hack）與 馬拉松（Marathon）的複合字用來表示一個『馬拉松式的科技創作活動』。連絡信箱：contact@hackathon.tw。">
+    <meta name="keywords" lang="zh-tw" content="黑客松,Hackathon,HanGee,Hack,Hacker,Maker,Hackathon Taiwan,科技創作,黑客松,编程马拉松,駭客松,自造,自造者,創意,機器人,Arduino,Raspberry Pi,3D Printer,DIY">
+    <meta name="robots" content="all,index,follow">
+    <meta name="googlebot" content="all,index,follow">
+    <meta name="revisit-after" content="1 days">
+
+    <title>黑客松 Hackathon Taiwan - 實現自我的創意、挑戰體能的極限</title>
+
+    <!-- Fav Icon and Apple Touch Icons -->
+    <link rel="icon" href="img/asset/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/asset/Icon-60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/asset/Icon-72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/asset/Icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/asset/Icon-60@2x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/asset/Icon-76@2x.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/asset/Icon-60@3x.png">
+
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/css/animate.css">
+    <link rel="stylesheet" href="style/css/style.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-responsive logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="text-right"><a href="#about">介紹</a></li>
+                    <li class="text-right"><a href="#pricing">活動</a></li>
+                    <li class="text-right"><a href="#portfolio">紀錄</a></li>
+                    <li class="text-right"><a href="#team">夥伴</a></li>
+                    <li class="text-right"><a href="#features">理念</a></li>
+                    <li class="text-right"><a href="#sponsor">贊助</a></li>
+                    <li class="text-right"><a href="#contact-us">聯絡</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Container -->
+    <div class="container-fluid">
+        <!-- Section 1 -->
+        <div class="row text-border frame">
+            <div class="col-md-12 cover-banner picasso top-section">
+                <div class="title-background">
+                    <!-- Title -->
+                    <div class="row top-title">
+                        <div class="col-md-6 col-md-offset-1">
+                            <h1 class="text-center">第六屆 <span class="color-golden"> 黑客松</span> 倒數</h1>
+                        </div>
+                    </div><!-- /Title -->
+                    <!-- Slogan -->
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-1">
+                            <p class="text-center color-white lead">即便是天馬行空的想法，當你開始做的時候，<br />其實離實現它已經不遠了</p>
+                        </div>
+                    </div><!-- /Slogan -->
+                    <!-- countdown_dashboard -->
+                    <div id="countdown_dashboard" class="countdown">
+                        <div class="row">
+                            <!-- Days -->
+                            <div class="col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-2 col-xs-4 col-xs-offset-1">
+                                <div class="days_dash">
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">4</div>
+                                        <div class="bottom" style="display: block;">4</div>
+                                    </div>
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">7</div>
+                                        <div class="bottom" style="display: block;">7</div>
+                                    </div>
+                                    <span class="dash_title">days</span>
+                                </div>
+                            </div><!-- /Days -->
+
+                            <!-- Hours -->
+                            <div class="col-md-3 col-sm-3 col-xs-4">
+                                <div class="hours_dash">
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">2</div>
+                                        <div class="bottom" style="display: block;">2</div>
+                                    </div>
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">0</div>
+                                        <div class="bottom" style="display: block;">0</div>
+                                    </div>
+                                    <span class="dash_title">hours</span>
+                                </div>
+                            </div><!-- /Hours -->
+                        </div>
+
+                        <div class="row">
+                            <!-- Minutes -->
+                            <div class="col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-2 col-xs-4 col-xs-offset-1">
+                                <div class="minutes_dash">
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">0</div>
+                                        <div class="bottom" style="display: block;">0</div>
+                                    </div>
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">2</div>
+                                        <div class="bottom" style="display: block;">2</div>
+                                    </div>
+                                    <span class="dash_title">minutes</span>
+                                </div>
+                            </div><!-- /Minutes -->
+
+                            <!-- Seconds -->
+                            <div class="col-md-3 col-sm-3 col-xs-4">
+                                <div class="seconds_dash">
+                                    <div class="digit">
+                                        <div class="top" style="display: none;">3</div>
+                                        <div class="bottom" style="display: block;">3</div></div>
+                                    <div class="digit">
+                                        <div class="top" style="display: block; overflow: hidden; height: 58.3951px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">4</div>
+                                        <div class="bottom" style="display: block; overflow: hidden; height: 6.7081015625px;">5</div>
+                                    </div>
+                                    <span class="dash_title">seconds</span>
+                                </div>
+                            </div><!-- /Seconds -->
+                        </div>
+                        <div class="row">
+                            <!-- Btn -->
+                            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-1 col-xs-10">
+                                <div class="welcome-btn">
+                                    <a class="btn btn-transparent site-wrapper-welcome__btn" href="http://www.accupass.com/go/hackathon06">活動報名</a>
+                                    <a class="btn btn-transparent site-wrapper-welcome__btn" href="https://hackathon.tw/agenda/agenda.html">活動議程</a>
+                                </div>
+                            </div><!-- /Btn -->\
+                        </div>
+                    </div><!-- /countdown_dashboard -->
+                </div>
+            </div>
+        </div><!-- /Section 1 -->
+
+        <!-- Section 2 -->
+        <div class="row frame bg-white">
+            <div class="col-md-12 contain-banner blue-ball" id="about">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-1 bg-white">
+                        <div class="row">
+                            <div class="col-xs-1"><span class="title-mark"></span></div>
+                            <div class="col-xs-11">
+                                <h2><span class="color-golden">黑客松</span><br /><small>Hackathon</small></h2>
+                                <p><strong>黑客松（Hackathon）是黑客（Hack）與 馬拉松（Marathon）的複合字，用來表示一個<span class="color-golden">『馬拉松式的科技創作活動』</span></strong></p>
+                                <hr>
+                                <ul class="list-unstyled">
+                                    <li><strong>黑客松不是比賽</strong></li>
+                                    <ul>
+                                        <li>一個讓設計人在閒暇時間，參與的開發運動。解放自己，做自己想做的設計和開發，挑戰自己，在有限時間內做出東西。</li>
+                                    </ul>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><strong>任何人都可以參加</strong></li>
+                                    <ul>
+                                        <li>黑客松是任何人都可以參加的活動，只要你有興趣、想實際參與多人設計和開發，無論你是學生、普通程式人員、還是新手設計師、初級自造者，都歡迎帶著學習、共樂的心前來參加！</li>
+                                    </ul>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><strong>自造、學習與交流</strong></li>
+                                    <ul>
+                                        <li>有高手大大、帥哥與美女人才們，有電有網路、有吃的有喝的，既然台灣的夏天嚴熱，當然還有附上空調視野絕佳的舒適環境，讓大家安心動手做設計、做開發！挑戰自我！</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1"><span class="title-mark"></span></div>
+                            <div class="col-xs-11">
+                                <h2>藝術<br /><small>Art</small></h2>
+                                <p class="color-golden"><strong>透過想像力、技術、經驗等人為因素的融合與平衡以製作隱含美學的器物、環境、影像、動作或聲音的表達模式，以指和他人分享美的或具有深意情感的產物。</span></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-2 col-xs-10 col-xs-offset-1 bg-white">
+                        <img class="img-responsive" src="img/newEvent.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Section 2 -->
+
+        <!-- Section 3 -->
+        <div class="row frame bg-white">
+            <div class="col-md-10 col-md-offset-1 pricing-items" id="pricing">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center">近期 <span class="color-golden">黑客松</span> 活動報名</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>3月</h2>
+                        <ul class="fa-ul">
+                            <li>
+                            <i class="fa-li fa fa-ticket"></i>
+                            報名日期：活動已結束
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-calendar"></i>
+                            活動日期：3/7（六）08:00 ～ 3/8（日）19:30
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-map-marker"></i>
+                            活動地點：台開金融大樓（台北市中正區重慶南路一段 2 號 B1）
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-warning"></i>
+                            注意事項：若遇颱風、地震、豪大雨及其它不可抗力因素而導致台北市人事局宣布停止上班，則本次活動依規定停辦
+                            </li>
+                        </ul>
+                        <a class="btn btn-default" href="http://www.accupass.com/go/hackathon05">活動已結束</a>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>4月</h2>
+                        <ul class="fa-ul">
+                            <li>
+                            <i class="fa-li fa fa-ticket"></i>
+                            報名日期：即日起 ～ 4 月 11 日
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-calendar"></i>
+                            活動日期：4/11（六）08:00 ～ 4/12（日）19:30
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-map-marker"></i>
+                            活動地點：台開承德大樓（台北市大同區承德路 3 段 232 號 B1）
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-warning"></i>
+                            注意事項：若遇颱風、地震、豪大雨及其它不可抗力因素而導致台北市人事局宣布停止上班，則本次活動依規定停辦
+                            </li>
+                        </ul>
+                        <a class="btn btn-default" href="http://www.accupass.com/go/hackathon06">活動已結束</a>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>5月</h2>
+                        <ul class="fa-ul">
+                            <li>
+                            <i class="fa-li fa fa-ticket"></i>
+                            報名日期：待公告
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-calendar"></i>
+                            活動日期：5/16（六）08:00 ～ 5/17（日）19:30
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-map-marker"></i>
+                            活動地點：待公告
+                            </li>
+                            <li>
+                            <i class="fa-li fa fa-warning"></i>
+                            注意事項：若遇颱風、地震、豪大雨及其它不可抗力因素而導致台北市人事局宣布停止上班，則本次活動依規定停辦
+                            </li>
+                        </ul>
+                        <a class="btn btn-default" href="">活動未開放</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Section 3 -->
+
+        <!-- Section 4 -->
+        <div class="row frame bg-white">
+            <div class="col-md-10 col-md-offset-1 schedule">
+                <div class="row">
+                    <div class="col-lg-6 col-md-4 col-sm-12">
+                        <img class="img-responsive" src="img/schedule-2015.jpg" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <dl class="dl-horizontal">
+                            <dt><h4 class="color-white">March</h4></dt>
+                            <dd><h4 class="color-deep-gray">03<span class="day">, 07 - 08</span></h4></dd>
+                            <dt><h4 class="color-white">April</h4></dt>
+                            <dd><h4 class="color-deep-gray">04<span class="day">, 11 - 12</span></h4></dd>
+                            <dt><h4 class="color-white">May</h4></dt>
+                            <dd><h4 class="color-deep-gray">05<span class="day">, 16 - 17</span></h4></dd>
+                            <dt><h4 class="color-white">June</h4></dt>
+                            <dd><h4 class="color-deep-gray">06<span class="day">, 13 - 14</span></h4></dd>
+                            <dt><h4 class="color-white">July</h4></dt>
+                            <dd><h4 class="color-deep-gray">07<span class="day">, 11 - 12</span></h4></dd>
+                            <dt><h4 class="color-white">August</h4></dt>
+                            <dd><h4 class="color-deep-gray">08<span class="day">, 15 - 16</span></h4></dd>
+                        </dl>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <dl class="dl-horizontal">
+                            <dt><h4 class="color-white">September</h4></dt>
+                            <dd><h4 class="color-deep-gray">09<span class="day">, 12 - 13</span></h4></dd>
+                            <dt><h4 class="color-white">October</h4></dt>
+                            <dd><h4 class="color-deep-gray">10<span class="day">, 17 - 18</span></h4></dd>
+                            <dt><h4 class="color-white">November</h4></dt>
+                            <dd><h4 class="color-deep-gray">11<span class="day">, 14 - 15</span></h4></dd>
+                            <dt><h4 class="color-white">December</h4></dt>
+                            <dd><h4 class="color-deep-gray">12<span class="day">, 12 - 13</span></h4></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Section 4 -->
+
+        <!-- Section 5 -->
+        <div class="row frame frame-bottom bg-white">
+            <div id="portfolio" class="col-md-10 col-md-offset-1 pictures">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>歷屆活動 <span class="color-golden">特寫</span></h2>
+                        <h4>想體驗大夥一同 Hack 的樂趣嗎？快加入我們！！！</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img src="img/hangee-hackathon01_resized.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img src="img/hangee-hackathon02_resized.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img src="img/hangee-hackathon03_resized.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img src="img/hangee-hackathon04_resized.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img src="img/hangee-hackathon05_resized.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img src="img/hangee-hackathon06_resized.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Section 5 -->
+
+        <!-- Section 6 -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 team" id="team">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>感謝合作夥伴們的力挺</h2>
+                        <h4>我們非常感謝擁有這些夥伴的支持，讓我們活動得以順利舉辦</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="img/team-default.png" alt="">
+                                    <div class="carousel-caption">
+                                        <h2 class="color-orange">HanGee</h2>
+                                        <p class="color-deep-gary"></p>
+                                        <a href="http://hangee.tw" class="btn btn-default" target="_blank">連結</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="img/team-makerpro.png" alt="">
+                                    <div class="carousel-caption">
+                                        <h2 class="color-orange">MakerPro</h2>
+                                        <p class="color-deep-gary">MakerPro 是一個以協助 Maker to Startup 為目標的新創圈開發社群／媒體平台，我們致力於建立完善、深入、實用的 Maker to Startup 學習、交流活動及分享資源，並進一步發展出基於 Collaborative Commons 精神的 Pro-Maker 新世代經營模式與平台。</p>
+                                        <a href="http://makerpro.cc" class="btn btn-default" target="_blank">連結</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="img/team-default.png" alt="">
+                                    <div class="carousel-caption">
+                                        <h2 class="color-orange">Node.js Party</h2>
+                                        <p class="color-deep-gary"></p>
+                                        <a href="https://www.facebook.com/groups/node.js.tw" class="btn btn-default" target="_blank">連結</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="img/team-jsgirls.png" alt="">
+                                    <div class="carousel-caption">
+                                        <h2 class="color-orange">JS Girls Taiwan</h2>
+                                        <p class="color-deep-gary">JS Grils Taiwan 是由一群想學習 JavaScript 的女生們組成，專為女性朋友們舉辦的 JavaScript 社群，希望成員們能一步一步擁有實現創意的能力。</p>
+                                        <a href="https://www.facebook.com/jsgirlstw" class="btn btn-default" target="_blank">連結</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="img/team-default.png" alt="">
+                                    <div class="carousel-caption">
+                                        <h2 class="color-orange">Qt@Taiwan</h2>
+                                        <p class="color-deep-gary"></p>
+                                        <a href="https://www.facebook.com/groups/qtdev" class="btn btn-default" target="_blank">連結</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Section 6 -->
+
+        <!-- Section 7 -->
+        <div class="row contain-banner sketch-ball">
+            <div class="col-md-10 col-md-offset-1 features" id="features">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>我們的理念</h2>
+                        <h4>重新塑造台灣的 <span class="color-golden">Hackathon</span> 生態</h4>
+                    </div>
+                </div>
+                <div class="row list">
+                    <div class="col-md-5 col-md-offset-1">
+                        <h3 class="text-center">01. 突破自己，挑戰極限</h3>
+                        <h3 class="text-center">02. 創新激盪，交流共享</h3>
+                        <h3 class="text-center">03. 培育文化，落地生根</h3>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>04. 實踐改變，刺激產業</h3>
+                        <h3>05. 開放創新，媒合跨界人才</h3>
+                        <h3>06. 產業整合，共創價值</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- /Section 7 -->
+
+        <!-- Section 8 -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 sponsor" id="sponsor">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1><i class="fa fa-caret-down"></i></h1>
+                        <h2>公開徵求 <span class="color-orange">贊助夥伴</span></h2>
+                        <h4>有您的支持，才能讓我們一路持續走下去</h4>
+                    </div>
+                </div>
+                <div class="row list">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center color-orange sponsor-level">鑽石級贊助</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="http://www.tldc.com.tw/main/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/taiwan-land.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="http://www.custardcream.org/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/custard.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://taiwan-doit.com/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/doit.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="http://avengergear.com/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/averger.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="http://www.criep.ntut.edu.tw/bin/home.php" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/NTUT.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center color-orange sponsor-level">黃金級贊助</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 col-xs-6 col-md-offset-1">
+                                <a href="http://pearnature.com" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/pearnature.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <a href="http://vvtk-digest.blogspot.tw/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/vivotek.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <a href="http://24h.pchome.com.tw/prod/DRAF4H-A9005RAHX" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/netgear.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <a href="http://www.azul.com.tw" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/azul.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <a href="http://accupass.com" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/accupass.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center color-orange sponsor-level">白銀級贊助</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                                <a href="http://qt-project.org/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/Qt-logo-medium.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center color-orange sponsor-level">青銅級贊助</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-4 col-sm-4 col-sm-offset-2 col-xs-6">
+                                <a href="http://www.buyic.com.tw/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/buyic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <a href="http://symbio.com/" target="_blank">
+                                    <img class="img-responsive" src="img/sponsor/symbio.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- /Section 8 -->
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-md-12 footer color-white" id="contact-us">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="color-white">歡迎隨時與我們聯繫</h3>
+                        <h5 class="color-white">如果您對黑客松有什麼建議或疑問，歡迎與我們聯繫。</h5>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h5>活動地址 :</h5>
+                        <a class="color-gary" href="https://goo.gl/maps/aRfgG" target="_blank">10367&nbsp; 台北市大同區承德路 3 段 232 號 B1&nbsp;（台開承德大樓）</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <h5>E-mail :</h5>
+                        <a class="color-gary" href="mailto:contact@hackathon.tw">contact@hackathon.tw</a>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-12 social">
+                        <a class="color-gary pull-right" href="http://www.youtube.com/user/hangeetw" target="_blank">
+                            <i class="fa fa-2x fa-youtube-square"></i>&nbsp;
+                        </a>
+                        <a class="color-gary pull-right" href="https://github.com/HanGee" target="_blank">
+                            <i class="fa fa-2x fa-github-square"></i>&nbsp;
+                        </a>
+                        <a class="color-gary pull-right" href="https://plus.google.com/u/0/b/108618731583461975036" target="_blank">
+                            <i class="fa fa-2x fa-google-plus-square"></i>&nbsp;
+                        </a>
+                        <a class="color-gary pull-right" href="https://www.facebook.com/hangeetw" target="_blank">
+                            <i class="fa fa-2x fa-facebook-square"></i>&nbsp;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Footer -->
+    </div>
+    <!-- /Container -->
+
+
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive" src="img/hangee-hackathon01.jpg" alt="">
+                            <h4>感受時間逐漸消逝的壓迫感</h4>
+                            <br/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive" src="img/hangee-hackathon02.jpg" alt="">
+                            <br/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive" src="img/hangee-hackathon03.jpg" alt="">
+                            <h4>喝不完的飲料和吃不完的食物</h4>
+                            <br/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive" src="img/hangee-hackathon04.jpg" alt="">
+                            <h4>成果展示</h4>
+                            <br/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive" src="img/hangee-hackathon05.jpg" alt="">
+                            <h4>黑客松一定少不了的比薩之夜</h4>
+                            <br/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive" src="img/hangee-hackathon06.jpg" alt="">
+                            <h4>成果展示</h4>
+                            <br/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/queryloader2.js"></script>
+    <script src="js/jquery.lwtCountdown-1.0.js"></script>
+    <script src="js/Horrus.js"></script>
+    <script src="js/nav-scroll.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-55915250-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

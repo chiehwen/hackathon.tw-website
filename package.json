@@ -1,0 +1,16 @@
+{
+  "name": "hackathon-taiwan",
+  "version": "1.0.0",
+  "description": "offical website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leonlin",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-less": "^3.0.2",
+    "gulp-minify-css": "^1.0.0"
+  }
+}
