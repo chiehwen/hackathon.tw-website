@@ -49,7 +49,9 @@
 
 
     <div class="mountain"></div>
-
+    <ul ng-repeat="member in members">
+        <li>{{ $index + '. ' + member.email }}</li>
+    </ul>
 
     </div>
     <!-- /Container -->

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hackathon Taiwan</title>
-    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="img/asset/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="style/css/pass.css" />
     <link rel="stylesheet" type="text/css" href="style/css/animate.css" />
@@ -13,22 +13,30 @@
 <body>
     <div ng-app="passCard">
         <div class="container" ng-controller="PassControl">
-
             <img class="animated rubberBand" src="img/passCard/logo-white.png" alt="" />
-            <h1>{{ name }}</h1>
+            <div ng-show="cardno">
+                <h2>no. {{ cardno }}</h2>
+                <h1>{ {{ name }} }</h1>
+                <h1>Welcome</h1>
+            </div>
+            <div ng-show="!cardno">
+                <br />
+                <h1>{ 無此人 }</h1>
+            </div>
+
             <div class="content">
-                <svg viewBox="0 0 600 300">
+                <svg viewBox="0 0 600 210">
                     <!-- Symbol with text -->
                     <symbol id="s-text">
                         <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line">
-                            Pass
+                            {{ message() }}
                         </text>
                     </symbol>
 
                     <!-- Clippath  with text -->
                     <clippath id="cp-text">
                         <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line">
-                            Pass
+                            {{ message() }}
                         </text>
                     </clippath>
 
