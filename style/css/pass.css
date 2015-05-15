@@ -1,4 +1,6 @@
 /* Main stuff */
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+
 .text--transparent {
   fill: transparent; }
 
@@ -58,7 +60,7 @@ img {
   width: 23%;
 }
 .content {
-  font: 100 12.5em/1  'Open Sans', Impact; }
+  font: 100 12.5em/1 'Oswald', Impact; }
 
 svg {
   width: 50%;
