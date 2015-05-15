@@ -6,7 +6,7 @@ body {
 }
 .mountain {
     width: 100%;
-    height: 1600px;
+    height: 800px;
     background-image: url('../../img/awardrs.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -91,7 +91,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 50px 0;
     }
 }
 
@@ -200,7 +200,7 @@ section h3.section-subheading {
 }
 
 .timeline .timeline-heading h4 {
-    margin-top: 0;
+    margin-top: 28px;
     color: inherit;
 }
 
@@ -210,6 +210,7 @@ section h3.section-subheading {
 
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
+    font-size: 28px;
     margin-bottom: 0;
 }
 
@@ -243,6 +244,12 @@ section h3.section-subheading {
         line-height: 18px;
     }
 
+    .timeline>li .timeline-image .points {
+        margin-top: 5px;
+        font-size: 30px;
+        line-height: 26px;
+    }
+
     .timeline>li.timeline-inverted>.timeline-panel {
         float: right;
         padding: 0 30px 20px 20px;
@@ -267,7 +274,13 @@ section h3.section-subheading {
 
     .timeline>li .timeline-image h4 {
         margin-top: 30px;
-        font-size: 18px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .timeline>li .timeline-image .points {
+        margin-top: 37px;
+        font-size: 42px;
         line-height: 26px;
     }
 

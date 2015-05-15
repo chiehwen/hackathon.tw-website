@@ -5,4 +5,10 @@ app.controller('AwardsController', function($scope, $http) {
         console.log(resp)
         $scope.members = resp.members;
     });
+
+    $scope.timelineStyle = function(index) {
+        if(index % 2 !== 0) {
+            return 'timeline-inverted';
+        }
+    };
 });
