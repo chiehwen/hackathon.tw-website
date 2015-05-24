@@ -73,8 +73,8 @@ jQuery(document).ready(function () {
     ========================================================================== */
     $('#countdown_dashboard').countDown({
         targetDate: {
-            'day': 16,
-            'month': 5,
+            'day': 13,
+            'month': 6,
             'year': 2015,
             'hour': 8,
             'min': 0,
